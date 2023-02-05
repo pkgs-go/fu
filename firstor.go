@@ -1,11 +1,11 @@
 package fu
 
 /*
-FirstOr returns first value from the range or default default one
+FirstOr returns first value from the range or default one
 */
 func FirstOr[T comparable](v T, a ...T) T {
-	for _, x := range a {
-		return x
+	if len(a) > 0 {
+		return a[0]
 	}
 	return v
 }
